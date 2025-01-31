@@ -1,0 +1,5 @@
+steps:
+- name: 'gcr.io/cloud-builders/buildpacks'
+  args: ['--builder', 'gcr.io/buildpacks/builder:v1', '--app-dir', 'jobs/get_fx_rates']
+images:
+- 'gcr.io/$PROJECT_ID/get-fx-rates'
