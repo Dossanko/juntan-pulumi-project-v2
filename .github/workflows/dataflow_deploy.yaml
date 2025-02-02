@@ -23,7 +23,6 @@ jobs:
       with:
         workload_identity_provider: 'projects/559849484721/locations/global/workloadIdentityPools/juntan-github-v1/providers/github-actions-provider'
         service_account: 'github-actions-dataflow-sa@juntan-project-448407.iam.gserviceaccount.com'
-
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@v2
       with:
