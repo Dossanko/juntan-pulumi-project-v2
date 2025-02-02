@@ -23,13 +23,13 @@ jobs:
       id: 'auth'
       uses: 'google-github-actions/auth@v2'
       with:
-        workload_identity_provider: 'projects/559849484721/locations/global/workloadIdentityPools/juntan-github-v2/providers/github-actions-provider' # 新しいプールIDに変更
+        workload_identity_provider: 'projects/559849484721/locations/global/workloadIdentityPools/juntan-github-v2/providers/github-actions-provider'
         service_account: 'github-actions-dataflow-sa@juntan-project-448407.iam.gserviceaccount.com'
 
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@v2
       with:
-        project_id: ${{ env.PROJECT_ID }}
+        project_id: ${{ secrets.PROJECT_ID }} # secretsから取得
 
     - name: Install dependencies
       run: |
@@ -39,7 +39,7 @@ jobs:
     - name: Deploy Dataflow Pipeline
       run: |
         python dataflow/fx_pipeline/main.py \
-          --project_id ${{ env.PROJECT_ID }} \
+          --project_id ${{ secrets.PROJECT_ID }} \ # secretsから取得
           --region ${{ env.REGION }} \
           --temp_location gs://${{ env.GCS_BUCKET }}/tmp \
           --runner DataflowRunner \
@@ -48,7 +48,7 @@ jobs:
           --streaming
       working-directory: ./
       env:
-        PROJECT_ID: ${{ secrets.PROJECT_ID }}
+        # PROJECT_ID: ${{ secrets.PROJECT_ID }}  # 上の階層で定義したので削除可能
         REGION: ${{ secrets.REGION }}
         GCS_BUCKET: ${{ secrets.GCS_BUCKET }}
         FINANCIAL_MODELING_PREP_API_KEY: ${{ secrets.FINANCIAL_MODELING_PREP_API_KEY }}
