@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths: # dataflowに変更があった場合のみ実行するように変更
+      - 'dataflow/**'
   workflow_dispatch:
 
 jobs:
@@ -21,21 +23,18 @@ jobs:
       id: 'auth'
       uses: 'google-github-actions/auth@v2'
       with:
-        workload_identity_provider: 'projects/559849484721/locations/global/workloadIdentityPools/juntan-github-v1/providers/github-actions-provider'
+        workload_identity_provider: 'projects/559849484721/locations/global/workloadIdentityPools/juntan-github-v2/providers/github-actions-provider' # 新しいプールIDに変更
         service_account: 'github-actions-dataflow-sa@juntan-project-448407.iam.gserviceaccount.com'
+
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@v2
       with:
-        project_id: ${{ secrets.PROJECT_ID }}
+        project_id: ${{ env.PROJECT_ID }}
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install --upgrade -r dataflow/fx_pipeline/requirements.txt
-
-    - name: Check setup.py existence # 追加：setup.pyの存在確認
-      run: |
-        ls -l dataflow/fx_pipeline
 
     - name: Deploy Dataflow Pipeline
       run: |
@@ -47,7 +46,7 @@ jobs:
           --save_main_session \
           --setup_file ./dataflow/fx_pipeline/setup.py \
           --streaming
-      working-directory: ./  # 追加：作業ディレクトリをプロジェクトルートに設定
+      working-directory: ./
       env:
         PROJECT_ID: ${{ secrets.PROJECT_ID }}
         REGION: ${{ secrets.REGION }}

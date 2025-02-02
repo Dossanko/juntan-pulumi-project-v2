@@ -1,2 +1,6 @@
 config:
+  juntan-pulumi-project-v2:github_repository: Juntan0001/juntan-pulumi-project-v2 # あなたのGitHubリポジトリに合わせて修正
+  juntan-pulumi-project-v2:project_id: juntan-project-448407
+  juntan-pulumi-project-v2:region: asia-northeast1
+  juntan-pulumi-project-v2:service_account_email: github-actions-dataflow-sa@juntan-project-448407.iam.gserviceaccount.com
   gcp:project: juntan-project-448407

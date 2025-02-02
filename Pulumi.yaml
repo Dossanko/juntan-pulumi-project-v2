@@ -1,11 +1,6 @@
-name: juntan-pulumi-project
-description: A minimal Google Cloud Python Pulumi program
+name: juntan-pulumi-project-v2
 runtime:
   name: python
   options:
-    toolchain: pip
     virtualenv: venv
-config:
-  pulumi:tags:
-    value:
-      pulumi:template: gcp-python
+description: Infrastructure for juntan-pulumi-project-v2
