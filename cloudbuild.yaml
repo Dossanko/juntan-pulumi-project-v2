@@ -1,5 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/buildpacks'
-  args: ['--builder', 'gcr.io/buildpacks/builder:v1', '--app-dir', 'jobs/get_fx_rates']
+  args: ['--builder', 'gcr.io/buildpacks/builder:v1', '--app-dir', 'jobs/get_fx_rates_v2', '--tag', 'gcr.io/$PROJECT_ID/get-fx-rates_v2']
 images:
-- 'gcr.io/$PROJECT_ID/get-fx-rates'
+- 'gcr.io/$PROJECT_ID/get-fx-rates_v2'
+logsBucket: 'gs://cloud-build_logs_bucket'

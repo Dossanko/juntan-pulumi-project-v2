@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "juntan-project-448407",
+  "private_key_id": "6649e8784be499ce867721e887722ca1d2d0e5c4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCsLHY+TxJdw6WF\nC1EfBT78xGJPuDRAcNHeNtUBpcxeNnZbbVCJAndqDIz7AzVGyCCrM8kipuHc3r5w\n+4bHiQNUfFAOw1Zz7iWiHKd9ZBims83Z+nyBwTLDjY7bysx5UkKTDKfWRUBbaP4e\nMiUApn5FMkjlaj+LRK8nW4AgfNYv6LN1VGyfyyyoc/PXouJ7CBoKUy0F1gWbaYTZ\nAr2BM0YcFCkDM4+CFYCMxEvsr2C+FruwfT8wym4Ofo3bV/j2qXkNrPrzKq6ENoWJ\nyX+OhR7AHQ1k6c74rMoj1V5RcDyvRCFtD3n1HaNGoyFB+AoqQHjBrlF6tdxkgbhy\nVSl2soNnAgMBAAECggEAOkD46PAcCLmPoUpI8jP2MdPIZ6ytkTga6hKnU11jnmTS\n+vArlY/OE4WXlb5qIj7IPuTQovbP6Mk8qkGQQqbrB4TgGX6iG6tx9D25tcVOSekA\nN0Z3JffWUy/sLBWbxVi9yb84clkQA12szU6uEmBCzOrMm0KtqVNd5/Ufjt5uIdsM\nespg24I4GYLDHTKlhYMobmMqsV6uT1GjV2NoqGBPLS+UvlwA9yn++/Gx72bLALsO\nwXJzMZC3uVJldy8s5aOaKcJ+8Qqpw4i2arHGSDPkEUJBpcdfbOZLImRXtD4BRQ+e\nlZMNCx7XQJKtI8DdV3pI/0vMYnXR6K7JPrKkh8dJcQKBgQDyyXfbndv7Nd+O3dfB\n/6/315jEaeJr8MFBEyx5//zxngzbXA9WpIYuTvVm7xfNla/xtZlho9HQeBoPSj3V\n2Udl+LDxIa/XHGXNQh8mKcUNj1vGRpS1a0RmuCsypkzlkiaKpOfw0JN4/+SluCh1\nJVJxbSAp8ST9R16dbZyY1KxclQKBgQC1izPIJeV0IooWywnsdT2ajI2lxMg3t+lf\nB8YNzLSpQwwzAfI9ZpaphdGBTEZW1DDy488lbhPev06MudNddD4IfbDHk/7WmFhf\n8az4XoORZYMb2OOBdGeInF4oJu1uNvFx3r2jKc47ABbUIU4UhNSIG9BPsCWo8EnC\nW7+1bwUlCwKBgQCLnFq2CUKUZFhX2S3Wuuc/h9SrLZAsLdeTSilLRm73qcEO6xNO\n6XDXdEQdmuN/LtJsFddLlF50mHuzyydfr4AlHSrynkJ1WjkYHSu4UFCmCYfmrnOZ\nF0PQJZuBlqulX7OWClnt2qLS86NRwGJTatDLtMrIE4kHtGCt+ngQUkuDOQKBgG0P\nukT0FztEgKaexVBrQl31MCc0538pmiY/2khyANpqcAq4kZk3Zy1iOfEuLFd/VASm\nvMvkrEU1sm+yNvs+mQGq2KedDgxHK1hALMRsqyeOz0vMaShdENGt9payhBKhKT1a\nLZy2wbEKJay8cVa8UZ2O7/7feFBcQkNjsPDDSFjvAoGBALlxhw0d9zfZxbncppMo\nVHxF7UjFk2dShiKbtptoKtuhMaKYPZAgG9tSihc4ipQQhsXufDE9SLr3swoamUVz\nXRpA7zyM+RvGK9RBDduQhPL4e9YGgk4oO6Bi6MDBudnK3AVhvzjRyDdxmUmjBRN5\ng4S4FrqLWoq35OCEXyYV8y8N\n-----END PRIVATE KEY-----\n",
+  "client_email": "juntan-pulumi-project-v2@juntan-project-448407.iam.gserviceaccount.com",
+  "client_id": "115736722019302562584",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/juntan-pulumi-project-v2%40juntan-project-448407.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

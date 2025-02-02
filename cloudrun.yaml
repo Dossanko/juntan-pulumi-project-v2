@@ -1,0 +1,9 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: juntan-fx-data-service-v2
+spec:
+  template:
+    spec:
+      containers:
+      - image: gcr.io/$PROJECT_ID/get-fx-rates_v2
