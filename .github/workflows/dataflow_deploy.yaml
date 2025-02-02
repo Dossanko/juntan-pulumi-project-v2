@@ -39,9 +39,9 @@ jobs:
     - name: Deploy Dataflow Pipeline
       run: |
         python dataflow/fx_pipeline/main.py \
-          --project_id ${{ env.PROJECT_ID }} \
-          --region ${{ env.REGION }} \
-          --temp_location gs://${{ env.GCS_BUCKET }}/tmp \
+          --project_id ${{ secrets.PROJECT_ID }} \
+          --region ${{ secrets.REGION }} \
+          --temp_location gs://${{ secrets.GCS_BUCKET }}/tmp \
           --runner DataflowRunner \
           --save_main_session \
           --setup_file ./dataflow/fx_pipeline/setup.py \
