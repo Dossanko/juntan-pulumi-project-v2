@@ -29,7 +29,7 @@ jobs:
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@v2
       with:
-        project_id: ${{ secrets.PROJECT_ID }}
+        project_id: ${{ env.PROJECT_ID }}
 
     - name: Install dependencies
       run: |
@@ -39,9 +39,9 @@ jobs:
     - name: Deploy Dataflow Pipeline
       run: |
         python dataflow/fx_pipeline/main.py \
-          --project_id ${{ secrets.PROJECT_ID }} \
-          --region ${{ secrets.REGION }} \
-          --temp_location gs://${{ secrets.GCS_BUCKET }}/tmp \
+          --project_id ${{ env.PROJECT_ID }} \
+          --region ${{ env.REGION }} \
+          --temp_location gs://${{ env.GCS_BUCKET }}/tmp \
           --runner DataflowRunner \
           --save_main_session \
           --setup_file ./dataflow/fx_pipeline/setup.py \
